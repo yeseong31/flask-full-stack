@@ -19,7 +19,7 @@ def login():
 
 @app.route('/html_test')
 def hello_html():
-    return render_template('login_rawtest.html')
+    return render_template('login.html')
 
 
 def get_blog_page():
