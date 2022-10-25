@@ -7,21 +7,17 @@ CORS(app)
 
 @app.route("/test", methods=['GET', 'POST', 'PUT', 'DELETE'])
 def test():
-    if request.method == 'POST':
-        print('POST')
-        data = request.get_json()
-        print(data)
-        print(data['email'])
     if request.method == 'GET':
-        print('GET')
         user = request.args.get('email')
         print(user)
+    if request.method == 'POST':
+        data = request.get_json()  # POST에서는 get_json() 함수를 이용하여 데이터를 가져옴
+        print(data)
+        print(data['email'])
     if request.method == 'PUT':
-        print('PUT')
         user = request.args.get('email')
         print(user)
     if request.method == 'DELETE':
-        print('DELETE')
         user = request.args.get('email')
         print(user)
 
@@ -29,4 +25,4 @@ def test():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port="8082")
+    app.run(host="0.0.0.0", port=8082)

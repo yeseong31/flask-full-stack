@@ -11,9 +11,9 @@ def page_not_found(error):
 
 @app.route("/google")
 def get_google():
-    response = requests.get("http://www.google.co.kr")
+    response = requests.get("https://www.google.co.kr")
     return response.text
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port="8080")
+    app.run(host="0.0.0.0", port=5000)
