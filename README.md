@@ -2,8 +2,8 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=Python&logoColor=ffdd54)
 ![Flask](https://img.shields.io/badge/Flask-%23000.svg?style=flat-square&logo=flask&logoColor=white)
-![PyCharm](https://img.shields.io/badge/pycharm-143?style=flat-square&logo=PyCharm&logoColor=black&color=black&labelColor=green)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=HTML5&logoColor=white)
+![PyCharm](https://img.shields.io/badge/PyCharm-143?style=flat-square&logo=pycharm&logoColor=black&color=black&labelColor=green)
+![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white)
 
 > ✏️ 파이썬 백엔드와 웹기술 부트캠프 공부 내용을 정리한 문서입니다.
 
