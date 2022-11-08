@@ -1,4 +1,4 @@
-from db_test.pymysql.connect_mariadb import connect_mariadb
+from flask_db_test.pymysql.connect_mariadb import connect_mariadb
 
 db_conn = connect_mariadb()
 cursor = db_conn.cursor()

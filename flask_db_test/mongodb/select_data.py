@@ -1,4 +1,4 @@
-from db_test.mongodb.connect_mongodb import connect_mongodb
+from flask_db_test.mongodb.connect_mongodb import connect_mongodb
 
 conn = connect_mongodb()
 
