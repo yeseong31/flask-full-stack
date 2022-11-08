@@ -1,5 +1,3 @@
-# flask-full-stack
-
 ![Python](https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=Python&logoColor=ffdd54)
 ![Flask](https://img.shields.io/badge/Flask-%23000.svg?style=flat-square&logo=flask&logoColor=white)
 ![PyCharm](https://img.shields.io/badge/PyCharm-143?style=flat-square&logo=pycharm&logoColor=black&color=black&labelColor=green)
@@ -23,5 +21,3 @@
 2. [Flask 개발 기초](https://incongruous-net-2ed.notion.site/Flask-daefda17bdb94810a11beddaa819efb2)
 3. [Flask 서비스 개발](https://incongruous-net-2ed.notion.site/Flask-42346ee758624035838bc08a3114cf17)
 4. [Flask 사용자 회원가입/로그인](https://incongruous-net-2ed.notion.site/Flask-0ac662e01a7d4f06b2d23af24cf52be9)
-
-수정: 2022-11-08
