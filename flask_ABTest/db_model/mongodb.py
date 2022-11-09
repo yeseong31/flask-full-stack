@@ -9,15 +9,11 @@ MONGODB_HOST = os.getenv('MONGODB_HOST')
 MONGODB_CONN = pymongo.MongoClient(f'mongodb://{MONGODB_HOST}')
 
 
-def conn_mongodb(conn):
+def conn_mongodb():
     try:
-        conn.admin.command('ismaster')
+        MONGODB_CONN.admin.command('ismaster')
+        blog_ab = MONGODB_CONN.blog_session_db.blog_ab
     except:
         conn = pymongo.MongoClient(f'mongodb://{MONGODB_HOST}')
-    finally:
         blog_ab = conn.blog_session_db.blog_ab
     return blog_ab
-
-
-if __name__ == '__main__':
-    conn_mongodb(MONGODB_CONN)
