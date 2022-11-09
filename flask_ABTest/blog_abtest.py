@@ -28,7 +28,7 @@ login_manager.session_protection = 'strong'
 
 
 @login_manager.user_loader
-def load_user(user_id):
+def user_loader(user_id):
     """로그인 후 최초 current_user 호출 시 동작 제어"""
     return User.get(user_id)
 
