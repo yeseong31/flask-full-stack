@@ -15,6 +15,7 @@
 5. [Error, Logging, Decorator](https://incongruous-net-2ed.notion.site/Flask-2e8cd708d4244202949e534b11dc59e8)
 6. [Flask 웹 서비스 구현](https://incongruous-net-2ed.notion.site/Flask-37439247986942eba5f89dd2f24f57a7)
 7. [Flask와 데이터베이스](https://incongruous-net-2ed.notion.site/Flask-b64fbccacab34e26b89b510a2c4af94f)
+8. [Flask 로그인](https://incongruous-net-2ed.notion.site/Flask-2df546fcbbc3435583fac477df24f000)
 
 ## 추가
 1. [Flask 개발 준비](https://incongruous-net-2ed.notion.site/Flask-d5466feeae664a04bddccea8f5a8864d)
