@@ -19,12 +19,11 @@ class BlogSession:
 
     @staticmethod
     def get_blog_page(force=None):
-        if force is None:
-            if BlogSession.session_count == 0:
-                BlogSession.session_count = 1
-                return 'blog_A.html'
-            else:
-                BlogSession.session_count = 0
-                return 'blog_B.html'
-        else:
+        if force is not None:
             return BlogSession.blog_page[force]
+        if BlogSession.session_count == 0:
+            BlogSession.session_count = 1
+            return 'blog_A.html'
+        else:
+            BlogSession.session_count = 0
+            return 'blog_B.html'

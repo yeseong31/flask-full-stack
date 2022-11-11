@@ -39,11 +39,8 @@ class User(UserMixin):
         db_cursor.execute(sql)
         user = db_cursor.fetchone()
         
-        if user is None:
-            db_cursor.close()
-            return None
-        
-        user = User(user_id=user[0], user_email=user[1], blog_id=user[2])
+        if user is not None:
+            user = User(user_id=user[0], user_email=user[1], blog_id=user[2])
         db_cursor.close()
         return user
     
@@ -51,14 +48,16 @@ class User(UserMixin):
     def create(user_email: str, blog_id: str):
         """user_email, blog_id 정보를 통해 사용자 생성"""
         user = User.find(user_email)
-        if user is None:
-            maria_db = conn_mariadb()
-            db_cursor = maria_db.cursor()
-            
-            sql = f"INSERT INTO user_info (user_email, blog_id) VALUES ('{user_email}', '{blog_id}')"
-            db_cursor.execute(sql)
-            maria_db.commit()
-            
+        
+        if user is not None:
+            return user
+        
+        maria_db = conn_mariadb()
+        db_cursor = maria_db.cursor()
+        
+        sql = f"INSERT INTO user_info (user_email, blog_id) VALUES ('{user_email}', '{blog_id}')"
+        db_cursor.execute(sql)
+        maria_db.commit()
         return User.find(user_email)
     
     @staticmethod
