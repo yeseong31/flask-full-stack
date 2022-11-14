@@ -7,7 +7,7 @@ cursor = db_conn.cursor()
 sql = """
 CREATE TABLE user_info (
     user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    user_email VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
     blog_id CHAR(4),
     PRIMARY KEY (user_id)
 );

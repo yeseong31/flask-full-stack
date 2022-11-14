@@ -7,12 +7,12 @@ class BlogSession:
     session_count = 0
 
     @staticmethod
-    def save_session_info(session_ip, user_email, webpage_name):
+    def save_session_info(session_ip, email, webpage_name):
         """사용자 Session 정보 저장"""
         now_time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         mongo_db = conn_mongodb()
         mongo_db.insert_one({'session_ip': session_ip,
-                             'user_email': user_email,
+                             'email': email,
                              'page': webpage_name,
                              'access_time': now_time})
 
