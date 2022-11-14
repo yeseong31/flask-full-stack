@@ -6,7 +6,7 @@ from flask_cors import CORS
 
 import config
 
-from flask_ABTest_ex.controls.user_mgmt import User
+from flask_ABTest.controls.user_mgmt import User
 
 
 # HTTPS만을 지원하는 기능을 HTTP에서 테스트할 때 필요한 설정
