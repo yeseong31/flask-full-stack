@@ -10,6 +10,8 @@ from flask_ABTest.controls.user_mgmt import User
 
 
 # HTTPS만을 지원하는 기능을 HTTP에서 테스트할 때 필요한 설정
+from flask_ABTest.views import email_views
+
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 
@@ -21,8 +23,9 @@ def create_app():
     app.secret_key = os.getenv('SECRET_KEY')
 
     # ----- Blueprint -----
-    from .views import main_views
-    app.register_blueprint(main_views.bp)
+    from .views import blog_views
+    app.register_blueprint(blog_views.bp)
+    app.register_blueprint(email_views.bp)
 
     # ----- flask_login -----
     login_manager = LoginManager()
