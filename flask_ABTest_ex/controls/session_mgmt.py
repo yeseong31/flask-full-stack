@@ -1,4 +1,4 @@
-from flask_ABTest.db_model.mongodb import conn_mongodb
+from config import conn_mongodb
 from datetime import datetime
 
 

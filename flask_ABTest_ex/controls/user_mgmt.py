@@ -1,5 +1,5 @@
 from flask_login import UserMixin
-from flask_ABTest.db_model.mariadb import conn_mariadb
+from config import conn_mariadb
 
 
 class User(UserMixin):
