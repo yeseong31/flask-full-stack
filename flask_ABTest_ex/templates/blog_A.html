@@ -1,0 +1,37 @@
+{% include 'header.html' %}
+
+<main class="container">
+  <div class="jumbotron p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-10 px-0">
+      <h2 class="display-4 mb-4">
+        <b>Flask를 공부하는 이유</b>
+      </h2>
+      <p class="lead my-3">
+
+      </p>
+      <p class="lead mb-2">
+        {% if user_email %}
+          {{ user_email }} 이메일 주소로 구독 중입니다.&nbsp;
+          <a class="btn btn-light" href="/blog/logout" role="button">구독 취소</a>
+        {% else %}
+          이메일 구독 신청
+          <form action="/blog/set_email" method="get">
+            <div class="row g-1">
+              <div class="col-9">
+                <input type="email" class="form-control" name="user_email" placeholder="name@email.com">
+                <input type="hidden" name="blog_id" value="A">
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">구독</button>
+              </div>
+            </div>
+          </form>
+        {% endif %}
+      </p>
+    </div>
+  </div>
+
+{% include 'body.html' %}
+</main>
+
+{% include 'footer.html' %}

@@ -6,4 +6,4 @@ bp = Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/test')
 def test():
-    return render_template('base.html')
+    return render_template('blog_A.html')
