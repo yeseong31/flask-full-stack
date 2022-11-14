@@ -17,10 +17,10 @@ class BlogSession:
                              'access_time': now_time})
 
     @staticmethod
-    def get_blog_page(force=None):
+    def get_blog_page(blog_id=None):
         """Session 접속 횟수에 따른 블로그 화면 표시 변경"""
-        if force is not None:
-            return BlogSession.blog_page[force]
+        if blog_id is not None:
+            return BlogSession.blog_page[blog_id]
         if BlogSession.session_count == 0:
             BlogSession.session_count = 1
             return 'blog_A.html'
