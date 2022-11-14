@@ -8,9 +8,8 @@ class BlogSession:
 
     @staticmethod
     def save_session_info(session_ip, user_email, webpage_name):
-        now = datetime.now()
-        now_time = now.strftime("%d/%m/%Y %H:%M:%S")
-
+        """사용자 Session 정보 저장"""
+        now_time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         mongo_db = conn_mongodb()
         mongo_db.insert_one({'session_ip': session_ip,
                              'user_email': user_email,
@@ -19,6 +18,7 @@ class BlogSession:
 
     @staticmethod
     def get_blog_page(force=None):
+        """Session 접속 횟수에 따른 블로그 화면 표시 변경"""
         if force is not None:
             return BlogSession.blog_page[force]
         if BlogSession.session_count == 0:
