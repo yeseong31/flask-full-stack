@@ -38,6 +38,6 @@ def conn_mongodb():
 
 def conn_mariadb():
     """MariaDB 연결 확인"""
-    if not MARIADB_CONN:
+    if not MARIADB_CONN.open:
         MARIADB_CONN.ping(reconnect=True)
     return MARIADB_CONN
