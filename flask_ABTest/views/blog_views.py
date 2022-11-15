@@ -2,6 +2,8 @@ from flask import Blueprint, url_for, render_template
 from flask_login import current_user, logout_user
 from werkzeug.utils import redirect
 
+from flask_ABTest.controls.user_mgmt import User
+
 bp = Blueprint('blog', __name__, url_prefix='/')
 
 
@@ -14,5 +16,6 @@ def main():
 
 @bp.route('/logout')
 def logout():
+    User.delete(current_user.id)
     logout_user()
     return redirect(url_for('blog.main'))
