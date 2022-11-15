@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, jsonify, make_response, request, render_template, g
+from flask import Flask, jsonify, make_response, session, request, render_template, g
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from flask_cors import CORS
 
@@ -41,5 +41,11 @@ def create_app():
     def unauthorized():
         """로그인이 되지 않은 사용자의 페이지 접근 제어"""
         return make_response(jsonify(success=False), 401)
+
+    @app.before_request
+    def app_before_request():
+        if 'client_id' not in session:
+            session['client_id'] = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
+
 
     return app
